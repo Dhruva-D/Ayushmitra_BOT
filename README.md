@@ -1,1 +1,1 @@
-### `streamlit run /qachat.py`
+### `streamlit run ./qachat.py`
