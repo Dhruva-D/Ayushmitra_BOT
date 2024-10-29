@@ -16,7 +16,7 @@ def get_gemini_response(question):
 # Initialize our Streamlit app
 st.set_page_config(page_title="Q&A Demo")
 
-st.header("Ayushmitra-bot")
+st.header("Ayushmitra-BOT")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -42,3 +42,4 @@ if submit and input:
 # st.subheader("The Chat History is")
 # for role, text in st.session_state['chat_history']:
 #     st.write(f"{role}: {text}")
+st.header("@ Team Ayushmitra")
