@@ -23,7 +23,7 @@ if 'chat_history' not in st.session_state:
     st.session_state['chat_history'] = []
 
 input = st.text_input("Input: ", key="input")
-submit = st.button("Ask the question")
+submit = st.button("Ask question")
 
 if submit and input:
     response = get_gemini_response(input)
@@ -31,7 +31,12 @@ if submit and input:
     st.session_state['chat_history'].append(("You", input))
     st.subheader("The Response is")
     for chunk in response:
-        st.write(chunk.text)
+        if (not(chunk.text)):
+            st.write('Unable to fetch data !!!! Contact the specialist') 
+        else:
+            st.write(chunk.text)
+        
+
         st.session_state['chat_history'].append(("Bot", chunk.text))
 
 # st.subheader("The Chat History is")
