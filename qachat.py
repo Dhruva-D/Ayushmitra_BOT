@@ -28,7 +28,7 @@ submit = st.button("Ask question")
 if submit and input:
     response = get_gemini_response(input)
     # Add user query and response to session state chat history
-    st.session_state['chat_history'].append(("You", input))
+    st.session_state['chat_history'].append(("You", input + 'Give response to the point make it short'))
     st.subheader("The Response is")
     for chunk in response:
         if (not(chunk.text)):
