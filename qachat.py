@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Directly set the API key
-GOOGLE_API_KEY = "AIzaSyBcTNAlCQvlasRjkesgTI5Fn1icNEq89rw"
+GOOGLE_API_KEY = "AIzaSyBjXjt3MIQgHcHXenJYopcCBnJlRh03YXs"
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Function to load Gemini Pro model and get responses
@@ -16,7 +16,7 @@ def get_gemini_response(question):
 # Initialize our Streamlit app
 st.set_page_config(page_title="Q&A Demo")
 
-st.header("Ayushmitra-BOT")
+st.header("FarmNexus - Agricultural Bot")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
